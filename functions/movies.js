@@ -14,7 +14,7 @@ exports.handler = async () => {
 
     return fetch(api).then(response => response.json()).then(data => {
       const scores = data.Ratings;
-      console.log(data)
+      // console.log(data)
       return {
         ...movie,
         scores,
