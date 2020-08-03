@@ -63,7 +63,7 @@
     <img src="" />
     <h2></h2>
     <p class="tagline"></p>
-
+    <p class="id"></p>
     <h3>View Ratings</h3>
     <ul class="scores"></ul>
   </div>
@@ -77,6 +77,8 @@
     const container = document.querySelector('.movies');
     const template = document.querySelector('#movie-template');
 
+    const SUPER_SECRET = "CIAO"
+
     movies.forEach(movie => {
       const element = template.content.cloneNode(true);
 
@@ -86,7 +88,7 @@
 
       element.querySelector('h2').innerText = movie.title;
       element.querySelector('.tagline').innerText = movie.tagline;
-
+      element.querySelector('.id').innerText = movie.id;
       container.appendChild(element);
     })
   }
